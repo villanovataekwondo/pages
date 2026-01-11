@@ -1,11 +1,22 @@
-Villanova Taekwondo Webpage created by Michael Baek
+# Villanova Taekwondo Webpage
 
-01/09/26 - updated by Rachel Phan
+**Created by:** Michael Baek  
+**Revamped on 01/09/26 by:** Rachel Phan  
 
-Notes for future updates:
+---
+
+## Notes for Future Updates
+
 ### `index.html` (Home Page)
-- Each image has a black block behind it to make the text visible when the image opacity is lowered.
+- Each image includes a **black background block** behind it.
+- Purpose: ensures **text readability** when image opacity is lowered.
+
+---
 
 ### `about.html`
-- The gallery uses a grid layout with custom dimensions and positioning for the images.
-- Currently set up for a **12-image gallery**.
+- Image gallery uses a **CSS grid layout**.
+- Images have **custom dimensions and positioning**.
+- Gallery is currently configured for a **12-image layout**.
+
+---
+
