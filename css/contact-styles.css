@@ -387,6 +387,42 @@ footer p {
         height: 450px;
     }
 
+    /* Contact */
+    .contact-card {
+        flex-direction: row;
+        align-items: center;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .contact-left {
+        width: 20%;
+        padding: 10px;
+        border-right: 1px solid #E1E3E8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-left img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact-right {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+
+    .contact-right a {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
     /* footer */
     footer {
         height: 60px;

@@ -314,6 +314,19 @@ footer p {
         height: 220px;
     }
 
+    /* COACHES */
+    
+    .coaches-grid {
+        flex-direction: column;
+        gap: 25px; 
+        align-items: center; 
+    }
+
+    .coach img {
+        width: 200px; 
+        height: auto; 
+    }
+    
 }
 
 /* ----------------- MOBILE (~600px) ----------------- */
