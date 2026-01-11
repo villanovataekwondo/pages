@@ -1,0 +1,384 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL FONTS */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+}
+
+/* NAVBAR */
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #00154A;
+    color: white;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 4rem;      
+    width: auto;       
+    display: block;  
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    text-align: center;
+}
+.nav-links a:hover {
+    color: #3BB3E5;
+  }
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.social-icons img {
+    width: 3rem;
+}
+.nav-links .mobile-icons {
+    display: none;
+}
+.desktop-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Class Focus by Day */
+.class-focus {
+    background-color: #001A5D;
+    padding: 30px 20px 80px;
+    color: #00154A;
+}
+  
+.class-focus h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+  
+.focus-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.focus-card,
+.day-card {
+    background-color: #FFFFFF; 
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px rgba(255, 255, 255, 0.25); 
+    color: #00154A;
+}
+  
+.focus-card.vertical {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.focus-card.vertical ul {
+    text-align: left;        
+    font-size: 1.1rem;       
+    line-height: 1.6;          
+    margin-top: 15px;
+}
+  
+.focus-card.vertical ul li {
+    margin-bottom: 10px;
+}
+  
+.focus-card h2 {
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 15px;
+}
+  
+.focus-card ul {
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 20px;
+}
+  
+.focus-days {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.day-card {
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+  
+.day-name {
+    width: 25%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 20px;
+    border-right: 2px solid #00154A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.day-info {
+    width: 75%;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.day-info p {
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+/* Schedule & Directions */
+.schedule-directions {
+    background-color: #E1E3E8;
+    padding: 80px 20px;
+}
+  
+.sd-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+  
+.sd-card {
+    flex: 1;
+    background: #001A5D;
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px rgba(255, 255, 255, 0.25);
+    padding: 25px;
+}
+  
+.sd-card h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+/* Calendar */
+.sd-card iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    background: white;
+}
+  
+/* Video */
+.sd-card video {
+    width: 100%;  
+    height: 500px;   
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  height: 80px;
+  background-color: #00154A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* ----------------- TABLET / SMALLER DESKTOP (~992px) ----------------- */
+@media (max-width: 992px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Nav links hidden initially */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;     
+        overflow: hidden;
+        background-color: #00154A;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: center;
+        transition: max-height 0.4s ease;
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* Show dropdown */
+    .nav-links.active {
+        max-height: 500px; 
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .desktop-icons {
+        display: none;  
+    }
+
+    .nav-links .mobile-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 3.5rem;
+    }
+
+    /*  Class Focus  */
+    .focus-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .focus-card.vertical,
+    .focus-days {
+        width: 100%;
+    }
+
+    .day-card {
+        flex-direction: row; 
+    }
+
+    .day-name, .day-info {
+        width: auto;
+    }
+
+    /*  Schedule & Directions  */
+    .sd-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sd-card {
+        width: 100%;
+    }
+
+    .sd-card iframe,
+    .sd-card video {
+        height: 400px; 
+    }
+
+}
+
+/* ----------------- MOBILE (~600px) ----------------- */
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .nav-links .social-icons {
+        display: none; 
+    }
+
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #00154A;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        transition: max-height 0.4s ease;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        margin: 8px 0;
+    }
+
+    .nav-links .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+
+    /* Footer */
+    footer {
+        height: 60px;
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,417 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL FONTS */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+}
+
+/* NAVBAR */
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #00154A;
+    color: white;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 4rem;      
+    width: auto;       
+    display: block;  
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    text-align: center;
+}
+.nav-links a:hover {
+    color: #3BB3E5;
+  }
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.social-icons img {
+    width: 3rem;
+}
+.nav-links .mobile-icons {
+    display: none;
+}
+.desktop-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* EBOARD */
+.eboard-section {
+    background-color: #001A5D;
+    color: white;
+    padding: 30px 20px 80px;
+    text-align: center;
+}
+
+.eboard-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 6px;
+}
+
+.eboard-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.eboard-subtitle a {
+    color: #3BB3E5;
+    text-decoration: none;
+}
+
+.eboard-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Vertical Years */
+.eboard-year {
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.eboard-center {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.eboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.member {
+    width: 180px;            
+    text-align: center;
+}
+
+.member img {
+    width: 100%;
+    height: 240px;    
+    object-fit: cover;  
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px rgba(255, 255, 255, 0.25);
+}
+
+.member-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;  
+    font-size: 1rem;        
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+
+.role {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.subrole {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* COACHES */
+.coaches-section {
+    background-color: #E1E3E8;
+    padding: 30px 20px 80px;
+    text-align: center;
+}
+
+.coaches-section h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.coaches-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.coaches-section a {
+    color: #00154A;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.coaches-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.coach img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px rgba(0, 21, 74, 0.5);
+}
+
+.coach-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.coach-rank {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+
+/* FOOTER */
+footer {
+  height: 80px;
+  background-color: #00154A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* ----------------- TABLET / SMALLER DESKTOP (~992px) ----------------- */
+@media (max-width: 992px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Nav links hidden initially */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;     
+        overflow: hidden;
+        background-color: #00154A;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: center;
+        transition: max-height 0.4s ease;
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* Show dropdown */
+    .nav-links.active {
+        max-height: 500px; 
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .desktop-icons {
+        display: none;  
+    }
+
+    .nav-links .mobile-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 3.5rem;
+    }
+
+    /* EBOARD */
+    .eboard-section {
+        padding: 45px 20px 70px;
+    }
+
+    .eboard-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .eboard-year {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        font-size: 3rem;
+    }
+
+    .eboard-center {
+        gap: 35px;
+    }
+
+    .eboard-row {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .member {
+        width: 170px;
+    }
+
+    .member img {
+        height: 220px;
+    }
+
+}
+
+/* ----------------- MOBILE (~600px) ----------------- */
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .nav-links .social-icons {
+        display: none; 
+    }
+
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #00154A;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        transition: max-height 0.4s ease;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        margin: 8px 0;
+    }
+
+    .nav-links .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+
+    /* EBOARD */
+    .eboard-section {
+        padding: 35px 15px 60px;
+    }
+
+    .eboard-title {
+        font-size: 2.3rem;
+    }
+
+    .eboard-subtitle {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .eboard-year {
+        display: none; 
+    }
+
+    .eboard-row {
+        gap: 18px;
+    }
+
+    .member {
+        width: 150px;
+    }
+
+    .member img {
+        height: 200px;
+    }
+
+    .role {
+        font-size: 0.95rem;
+    }
+
+    .subrole {
+        font-size: 0.85rem;
+    }
+
+    /* FOOTER */
+    footer {
+        height: 60px;
+        padding: 10px 0;
+    }
+}

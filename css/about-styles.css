@@ -1,0 +1,390 @@
+
+html {
+    overflow-y: scroll;
+}
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL FONTS */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+}
+
+/* NAVBAR */
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #00154A;
+    color: white;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 4rem;      
+    width: auto;       
+    display: block;  
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    text-align: center;
+}
+.nav-links a:hover {
+    color: #3BB3E5;
+  }
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.social-icons img {
+    width: 3rem;
+}
+.nav-links .mobile-icons {
+    display: none;
+}
+.desktop-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* ABOUT THE CLUB SECTION */
+
+.about-club {
+    width: 100%;
+    min-height: 500px;
+    background-color: #001A5D;
+    display: flex;
+}
+
+.about-text {
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    text-align: center;
+}
+
+.about-text h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* GALLERY SECTION */
+
+.about-gallery {
+    background-color: #E1E3E8;
+    padding: 30px 20px;
+}
+
+.gallery-grid {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 180px 260px 260px;
+    grid-auto-rows: 200px;
+    gap: 9px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.g1 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+}
+
+.g2 {
+    object-position: 60% 30%;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.g3 {
+    object-position: 50% 30%;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+.g4 {
+    object-position: 50% 35%;
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+}
+
+.g5 {
+    object-position: top;
+    grid-column: 6 / 8;
+    grid-row: 1 / 2;
+}
+
+.g6 {
+    grid-column: 4 / 8;
+    grid-row: 2 / 4;
+}
+
+.g7 {
+    grid-column: 8 / 10;
+    grid-row: 1 / 2;
+}
+
+.g8 {
+    grid-column: 8 / 10;
+    grid-row: 2 / 4;
+}
+
+.g9 {
+    grid-column: 10 / 11;
+    grid-row: 1 / 2;
+}
+
+.g10 {
+    object-position: 40% 20%;
+    grid-column: 10 / 11;
+    grid-row: 2 / 4;
+}
+
+.g11 {
+    grid-column: 11 / 13;
+    grid-row: 1 / 3;
+}
+
+.g12 {
+    grid-column: 11 / 13;
+    grid-row: 3 / 4;
+}
+
+
+/* FOOTER */
+footer {
+  height: 80px;
+  background-color: #00154A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* ----------------- TABLET / SMALLER DESKTOP (~992px) ----------------- */
+@media (max-width: 992px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Nav links hidden initially */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;         
+        overflow: hidden;
+        background-color: #00154A;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: center;
+        transition: max-height 0.4s ease;
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* Show dropdown */
+    .nav-links.active {
+        max-height: 500px; 
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .desktop-icons {
+        display: none;  
+    }
+
+    .nav-links .mobile-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 3.5rem;
+    }
+
+    /* ABOUT */
+    .about-club {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .about-text,
+    .about-image {
+        width: 100%;
+    }
+    
+    .about-image {
+        height: 350px;
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+        grid-auto-rows: 220px;
+    }
+
+    .gallery-grid img {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+}
+
+/* ----------------- MOBILE (~600px) ----------------- */
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .nav-links .social-icons {
+        display: none; 
+    }
+
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #00154A;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        transition: max-height 0.4s ease;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        margin: 8px 0;
+    }
+
+    .nav-links .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+
+    .about-image {
+        height: 260px;
+    }
+
+    /* ABOUT */
+    .about-text {
+        padding: 40px 20px;
+    }
+    
+    .about-text h1 {
+        font-size: 2.4rem;
+    }
+    
+    .about-text h2 {
+        font-size: 1rem;
+    }
+    
+    /* GALLERY */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 260px;
+    }
+}
